@@ -43,7 +43,7 @@ namespace WebApi.Controllers
                          var productItem = new Catalog();
                          productItem.Id = Convert.ToInt32(sqlreader["Id"]);
                          productItem.Name = sqlreader["Name"].ToString();
-                         productItem.Price = Convert.ToInt32(sqlreader["Price"]);
+                         productItem.Price = Convert.ToDecimal(sqlreader["Price"]);
                          productItem.PhotoUrl = sqlreader["PhotoUrl"].ToString();
                          listCatalog.Add(productItem);
                      }
